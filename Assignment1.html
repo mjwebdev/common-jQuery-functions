@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#cat, #ninja1, #ninja2').hide();
+			$('.addclassbtn').click(function(){
+				$('#addClass p').css('color', 'red');
+			});
+			$('.afterbtn').click(function(){
+				$('.afterp').after(" comes this.");
+			});
+			$('.appendbtn').click(function(){
+				$('.appendnew').append("<p>I'm a new paragraph</p> ");
+			});
+			var title = $("strong").attr("title");
+			$(".attriword").text( title );
+
+			$('.beforebtn').click(function(){
+				$('.beforep').before("This is the beginning... ");
+			});
+			$('.htmlbtn').click(function(){
+				$('.htmlDiv').html('<p>I am cool..</p>');
+			});
+
+			$('.textbtn').click(function(){
+				$('.text1').text('Here is some text <p></p><strong> yolo</strong>');
+			});
+
+			$("input").keyup(function(){
+				var value = $(this).val();
+				$("#val p").text(value);
+			})
+			.keyup();
+			
+			$('.togglebtn').click(function(){
+				$("#toggle p").toggle();
+			});
+
+			$('.hidebtn').click(function(){
+				$("#hidenshow p").hide();
+			});
+			$('.showbtn').click(function(){
+				$("#hidenshow p").show();
+			});
+
+			$('.slideD').click(function(){
+				$('#ninja1').slideDown(function(){
+					//Animation complete
+				});
+			});
+
+			$('.toggle').click(function(){
+				$('#cat').slideToggle(function(){
+					//Animation complete
+				});
+			});
+
+			$('.slideU').click(function(){
+				$('#ninja2').slideUp(function(){
+					//Animation complete
+				});
+			});
+			$('.fadeO').click(function(){
+				$('#ninja3').fadeOut( "fast", function(){
+					//Animation complete
+				});
+			});
+			$('.fade1').click(function(){
+				$('#ninja3').fadeIn( "fast", function(){
+					//Animation complete
+				});
+			});
+			$('.focusyay').click(function(){
+				$(".focusinput").focus();
+				$( "b" ).css("display", "inline").fadeOut( 1000 );
+				
+			});
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="addClass">
+		<h1>AddClass</h1>
+		<button class="addclassbtn buttongen" type="button">AddClass</button>
+		<p>Click the button to add class "red" to this paragraph</p>
+		<hr></hr>
+	</div>
+	<div id="after">
+		<h1>After</h1>
+		<button class="afterbtn buttongen" type="button">After</button>
+		<p>Click the button to show after</p>
+		<br>
+		<p class="afterp">After this...</p>
+		<hr></hr>
+	</div>
+	<div id="append">
+		<h1>Append</h1>
+		<button class="appendbtn buttongen" type="button">Append</button>
+		<p>Click the button to append a new paragraph!</p>
+		<div class="appendnew">
+		<hr></hr>
+		</div>
+	</div>
+	</div>
+	<div id="before">
+		<h1>Before</h1>
+		<button class="beforebtn buttongen" type="button">After</button>
+		<p>Click the button to show Before</p>
+		<br>
+		<p class="beforep">this is the end...</p>
+		<hr></hr>
+	</div>
+	<div id="html">
+		<h1>Html Demo</h1>
+		<button class="htmlbtn buttongen" type="button">html</button>
+		<p> click to view a secret</p>
+		<div class="htmlDiv"><p>SECRET WILL SHOW HERE</p></div>
+		<hr></hr>
+		
+	</div>
+	<div id="text">
+		<h1>Text</h1>
+		<button class="textbtn buttongen" type="button">html</button>
+		<p> click to view a secret</p>
+		<div class="text1"><p>SECRET WILL SHOW HERE</p></div>
+		<hr></hr>
+		
+	</div>
+	<div id="val">
+		<h1>Val</h1>
+		<input type="text" value="Test it out here">
+		<p></p>
+		<hr></hr>
+
+	</div>
+	<div id="toggle">
+		<h1> Toggle</h1>
+		<button class="togglebtn buttongen" type="button">Toggle</button>
+		<p> Toggle Me!</p>
+		<hr>
+	</div>
+	<div id="hidenshow">
+		<h1> Hide & Show</h1>
+		<button class="hidebtn buttongen" type="button">Hide me!</button>
+		<p> Lets play Hide and Seek</p>
+		<button class="showbtn buttongen" type="button">Show me!</button>
+		<hr>
+	</div>
+	
+	<div id="slideDown">
+		<h1>SlideDown</h1>
+		<button class="slideD buttongen" type="button">Slide Down</button>
+		<p>Click the button to slideDown</p>
+		<br>
+		<img id="ninja1" src="Ninja1.jpg"></img>
+		<hr></hr>
+	</div>
+	<div id="slidetoggle">
+		<h1>Slidetoggle</h1>
+		<button class="toggle buttongen" type="button">Slidetoggle</button>
+		<p>Click the button to slidetoggle a hidden image</p>
+		<br>
+		<img id="cat" src="catpic.jpg"></img>
+		<hr></hr>
+	</div>
+	<div id="slideOut">
+		
+	</div>
+	<div id="slideUp">
+		<h1>SlideUp</h1>
+		<button class="slideU buttongen" type="button">Slide Up</button>
+		<p>Click the button to slideUp</p>
+		<br>
+		<img id="ninja2" src="Ninja1.jpg"></img>
+		<hr>
+	</div>
+	<div id="fadeO">
+		<h1>FadeOut</h1>
+		<button class="fadeO buttongen" type="button">FadeOut</button>
+		<p>Click the button to fade in or out</p>
+		<button class="fade1 buttongen" type="button">FadeIn</button>
+		<br>
+		<img id="ninja3" src="Ninja1.jpg"></img>
+		<hr>
+	</div>
+		
+	<div id="focusyay">
+		<h1>Focus</h1>
+		<button class="focusyay buttongen" type="button">Focus!</button>
+		<p><input type="text" class="focusinput"> <b>focus</b></p>
+		<hr>
+	</div>
+	<div id="click">
+		
+	</div>
+</body>
+</html>

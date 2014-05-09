@@ -1,0 +1,16 @@
+p {
+	display: inline-block;
+}
+body {
+	text-align: center;
+}
+.buttongen {
+	display: inline-block;
+	margin-right: 20px;
+}
+body hr {
+	width: 450px;
+}
+b {
+	display:none;
+}
